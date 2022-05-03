@@ -203,23 +203,27 @@ export default function BagPage() {
 
                     <h3>Your total: {totalValue}</h3>
 
-                    <button className="button-proceed-payment" onClick={function () {
-                        navigate(`/transaction/2/checkout`)
-                    }}>
+                    <div className="button-wrapper-cart">
 
-                            Proceed to payment
+                        <button className="button-proceed-payment" onClick={function () {
+                            navigate(`/transaction/2/checkout`)
+                        }}>
 
-                    </button>
+                                Proceed to payment
 
-                    <button className="button-clear-cart" onClick={function () {
-                        dispatch(invalidateCart())
-                    }}>
-                        Clear Cart
-                    </button>
+                        </button>
 
-                    <Link to = "/createBankAccount" className="create-account-bank">
-                        Create a bank account
-                    </Link>
+                        <button className="button-clear-cart" onClick={function () {
+                            dispatch(invalidateCart())
+                        }}>
+                            Clear Cart
+                        </button>
+
+                        <Link to = "/createBankAccount" className="create-account-bank">
+                            Create a bank account
+                        </Link>
+
+                    </div>
 
                 </section>
 
